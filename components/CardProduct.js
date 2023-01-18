@@ -10,7 +10,7 @@ const CardProduct = ({product}) => {
     const {rate , count } = product.rating
   return (
     <div className="flex">
-    <a href="#" className="grid p-2 sm:w-72 h-[500px] w-96 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+    <a href="#" className="grid p-2 sm:w-72 h-[500px] w-80 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
     
         <Image height="250" width="150" alt="Product" src={product.image}/>
         <h5 className="my-2  text-sm font-bold tracking-tight text-gray-900 dark:text-white">{product.title}</h5>

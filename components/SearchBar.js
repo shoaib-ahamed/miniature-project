@@ -58,7 +58,7 @@ const SearchBar = ({products}) => {
                         <a key={key} href={value.link}>
                             <Link href={`/product/${value.id}`}>
                             <div className="flex flex-row border border-mainColor gap-2">
-                                <Image height="12" width="12" alt="Product" src={value.image}/>
+                                <Image height="15" width="15" alt="Product" src={value.image}/>
                                 <p className="font-normal text-mainColor text-left dark:text-gray-400">{lessDetails(value.title)}...</p>
                             </div>
                             </Link>
