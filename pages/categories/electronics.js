@@ -19,7 +19,7 @@ const Electronics = ({products}) => {
         <> 
             <SearchBar products={products}  />
             <div className="text-3xl text-center py-5">All Electronics Products :</div>
-            <div className="flex flex-wrap mx-2 justify-center my-5 gap-5">
+            <div className="flex flex-wrap mx-2 justify-center my-5 mb-20 gap-5">
             {products.map(product =>(
                 checkCategory(product.category, product)
                 ))}
