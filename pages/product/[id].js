@@ -8,7 +8,7 @@ const DetailProduct = ({product}) => {
     const {rate , count} = product.rating;
 
     return (
-        <div className="md:flex items-start justify-center py-12 2xl:px-20 md:px-6 px-4">
+        <div className="md:flex items-start justify-center py-12 mb-20 2xl:px-20 md:px-6 px-4">
             <div className="md:w-1/2 w-full flex justify-center">
             <Image height="600" width="500" alt="Product" src={product.image}/>
             </div>
