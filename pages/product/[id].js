@@ -17,8 +17,8 @@ const DetailProduct = ({product}) => {
                     <div className="flex justify-between">
                     <p className="leading-none text-mainColor">{product.category}</p>
                     <div className="text-center">
-                    <p>ratings: {rate}</p>
-                    <p>count: {count}</p>
+                    <p>Ratings: {rate}</p>
+                    <p>Count: {count}</p>
                     </div>
 
                     </div>
@@ -100,7 +100,7 @@ const DetailProduct = ({product}) => {
     );
 };
 
-export async function getServerSideProps({params: {id}}) {
+export async function getStaticProps({params: {id}}) {
   let res = [];
 
    await fetch(`https://fakestoreapi.com/products/${id}`)
