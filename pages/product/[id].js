@@ -100,25 +100,7 @@ const DetailProduct = ({product}) => {
     );
 };
 
-export async function getServerSideProps({params: {id}}) {
-  let res = [];
 
-   await fetch(`https://fakestoreapi.com/products/${id}`)
-                      .then((response) => response.json())
-                      .then((data) => {
-                        res = data
-                      })
-                      .catch((err) => {
-                        console.log(err.message);
-                      })
-  // server side rendering
-
-  return {
-    props: {
-         product: res
-      }, // will be passed to the page component as props
-  }
-}
 
 export async function getStaticPaths() {
     const res = await fetch('https://fakestoreapi.com/products')
@@ -133,6 +115,26 @@ export async function getStaticPaths() {
     // { fallback: blocking } will server-render pages
     // on-demand if the path doesn't exist.
     return { paths, fallback: false }
+  }
+
+  export async function getStaticProps({params: {id}}) {
+    let res = [];
+  
+     await fetch(`https://fakestoreapi.com/products/${id}`)
+                        .then((response) => response.json())
+                        .then((data) => {
+                          res = data
+                        })
+                        .catch((err) => {
+                          console.log(err.message);
+                        })
+    // server side rendering
+  
+    return {
+      props: {
+           product: res
+        }, // will be passed to the page component as props
+    }
   }
 
 export default DetailProduct

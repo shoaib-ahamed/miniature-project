@@ -48,6 +48,7 @@ export async function getStaticProps() {
     props: {
          products: res
       }, // will be passed to the page component as props
+      revalidate: 100,
   }
 }
 
