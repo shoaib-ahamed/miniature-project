@@ -34,13 +34,13 @@ const Navbar = () => {
             </div>
             <ul className="flex flex-col items-center justify-center gap-6 min-h-screen">
               <li>
-                <a href="/categories/mens-collection">Mens Collection</a>
+                <Link href="/categories/mens-collection">Mens Collection</Link>
               </li>
               <li>
-                <a href="/categories/jewelery">jewelery</a>
+                <Link href="/categories/jewelery">jewelery</Link>
               </li> 
               <li>
-                <a href="/categories/electronics">electronics</a>
+                <Link href="/categories/electronics">electronics</Link>
               </li>  
               <li className="border-b border-mainColor my-2 uppercase">
                 <Link href="/categories/womens-clothing">womens clothing</Link>
@@ -51,16 +51,16 @@ const Navbar = () => {
 
         <ul className="DESKTOP-MENU hidden items-center justify-center lg:flex gap-3">
             <li className="bg-gray-300 rouned rounded-2xl text-mainColor px-5 py-2 hover:text-gray-300 hover:bg-[#5d5555]">
-            <a href="/categories/mens-collection">Mens Collection</a>
+            <Link href="/categories/mens-collection">Mens Collection</Link>
             </li>
             <li className="bg-gray-300 rouned rounded-2xl text-mainColor px-5 py-2 hover:text-gray-300 hover:bg-[#5d5555]">
             <Link href="/categories/womens-collection">Womens Collection</Link>
             </li>
             <li className="bg-gray-300 rouned rounded-2xl text-mainColor px-5 py-2 hover:text-gray-300 hover:bg-[#5d5555]">
-                <a href="/categories/jewelery">Jewelery</a>
+                <Link href="/categories/jewelery">Jewelery</Link>
             </li>  
             <li className="bg-gray-300 rouned rounded-2xl text-mainColor px-5 py-2 hover:text-gray-300 hover:bg-[#5d5555]">
-            <a href="/categories/electronics">Electronics</a>
+            <Link href="/categories/electronics">Electronics</Link>
             </li> 
         </ul>
       </nav>
