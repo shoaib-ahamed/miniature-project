@@ -18,7 +18,7 @@ const ProductItem = ({products}) => {
         <> 
             <SearchBar products={products}  />
             <div className="text-3xl py-5">All Products :</div>
-            <div className="flex flex-wrap mx-2 my-5 justify-center gap-5">
+            <div className="flex flex-wrap mx-2 my-5 mb-20 justify-center gap-5">
             {products.map(product =>(
                 <CardProduct key={product.id} product={product} />
                 ))}
