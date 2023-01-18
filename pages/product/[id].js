@@ -100,7 +100,7 @@ const DetailProduct = ({product}) => {
     );
 };
 
-export async function getStaticProps({params: {id}}) {
+export async function getServerSideProps({params: {id}}) {
   let res = [];
 
    await fetch(`https://fakestoreapi.com/products/${id}`)
