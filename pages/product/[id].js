@@ -120,4 +120,19 @@ export async function getServerSideProps({params: {id}}) {
   }
 }
 
+export async function getStaticPaths() {
+    const res = await fetch('https://fakestoreapi.com/products')
+    const products = await res.json()
+  
+    // Get the paths we want to pre-render based on products
+    const paths = products.map((product) => ({
+      params: { id: product.id },
+    }))
+  
+    // We'll pre-render only these paths at build time.
+    // { fallback: blocking } will server-render pages
+    // on-demand if the path doesn't exist.
+    return { paths, fallback: 'blocking' }
+  }
+
 export default DetailProduct
