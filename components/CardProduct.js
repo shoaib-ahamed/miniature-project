@@ -16,7 +16,7 @@ const CardProduct = ({product}) => {
         </div>    
         <h5 className="my-1  text-sm font-bold tracking-tight text-gray-900 dark:text-white">{product.title}</h5>
     
-        <div className="grid gap-2 m-2">
+        <div className="grid gap-2 m-3">
             <div className='flex text-white justify-between'>
                 <div className="text-left">
                     <p className='font-normal text-xs'>Category: {product.category}</p>
@@ -28,7 +28,7 @@ const CardProduct = ({product}) => {
                 </div>
             </div>
             <p className="font-normal text-sm text-gray-700 text-left dark:text-gray-400">{lessDetails(product.description)}...</p>
-            <div className="flex justify-between text-white">
+            <div className="flex justify-around text-white">
                 <Link href={`/product/${product.id}`}>
                 <button className="border border-white hover:bg-gray-400 hover:text-cardColor hover:border-black rounded-lg w-20 p-2">View</button>
                 </Link>
