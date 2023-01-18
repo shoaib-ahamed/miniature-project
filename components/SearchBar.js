@@ -52,14 +52,16 @@ const SearchBar = ({products}) => {
             </div>
 
             {filteredData.length != 0 && (
-                <div className="h-72 w-72 border border-black">
+                <div className="h-72 w-72 border rounded-md border-black bg-slate-300  overflow-scroll">
                     {filteredData.slice(0, 15).map((value, key) => {
                         return (
                         <a key={key} href={value.link}>
                             <Link href={`/product/${value.id}`}>
                             <div className="flex flex-row border border-mainColor gap-2">
-                                <Image height="15" width="15" alt="Product" src={value.image}/>
-                                <p className="font-normal text-mainColor text-left dark:text-gray-400">{lessDetails(value.title)}...</p>
+                                <div className='rounded-md h-16 w-16 flex justify-center items-center'>
+                                    <Image className='rounded-md' height="50" width="50" alt="Product" src={value.image}/>
+                                </div>
+                                <p className="font-normal text-mainColor text-left">{lessDetails(value.title)}...</p>
                             </div>
                             </Link>
                         </a>
