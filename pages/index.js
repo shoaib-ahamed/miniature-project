@@ -20,7 +20,7 @@ const Home = ({products}) => {
 };
 
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   let res = [];
 
    await fetch(`https://fakestoreapi.com/products`)
@@ -37,6 +37,8 @@ export async function getServerSideProps() {
     props: {
          products: res
       }, // will be passed to the page component as props
+      revalidate: 100,
+      // and revalidate every 100 seconds.
   }
 }
 
