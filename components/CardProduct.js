@@ -10,9 +10,10 @@ const CardProduct = ({product}) => {
     const {rate , count } = product.rating
   return (
     <div className="flex">
-    <a href="#" className="grid p-2 sm:w-72 h-[500px] w-[336px] bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-    
-        <Image height="220" width="120" alt="Product" src={product.image}/>
+    <a href="#" className="grid p-2 sm:w-72 h-[530px] w-[336px] bg-cardColor border border-cardColor rounded-lg shadow-md hover:bg-gray-600">
+        <div className="h-64 p-3 flex justify-center items-center">
+            <Image height="240" width="220" className='rounded-md' alt="Product" src={product.image}/>    
+        </div>    
         <h5 className="my-2  text-sm font-bold tracking-tight text-gray-900 dark:text-white">{product.title}</h5>
     
         <div className="grid gap-3 m-2">
@@ -26,12 +27,12 @@ const CardProduct = ({product}) => {
                     <p className='font-normal text-sm'>Count: {count}</p>
                 </div>
             </div>
-            <p className="font-normal text-gray-700 text-left dark:text-gray-400">{lessDetails(product.description)}...</p>
+            <p className="font-normal text-sm text-gray-700 text-left dark:text-gray-400">{lessDetails(product.description)}...</p>
             <div className="flex justify-between text-white">
                 <Link href={`/product/${product.id}`}>
-                <button className="border border-white rounded-lg w-20 p-2">View</button>
+                <button className="border border-white hover:bg-gray-400 hover:text-cardColor hover:border-black rounded-lg w-20 p-2">View</button>
                 </Link>
-                <button className="border border-white rounded-lg w-20 p-2">Buy</button>
+                <button className="border border-white hover:bg-gray-400 hover:text-cardColor hover:border-black rounded-lg w-20 p-2">Buy</button>
             </div>
         </div>
     </a>
