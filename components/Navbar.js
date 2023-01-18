@@ -33,17 +33,17 @@ const Navbar = () => {
               <AiFillCloseCircle className="text-3xl"/>
             </div>
             <ul className="flex flex-col items-center justify-center gap-6 min-h-screen">
-              <li>
-                <Link href="/categories/mens-collection">Mens Collection</Link>
+              <li onClick={() => setIsNavOpen(false)} className="transition-all">
+                <Link href="/categories/mens-collection" >Mens Collection</Link>
               </li>
-              <li>
+              <li onClick={() => setIsNavOpen(false)}>
                 <Link href="/categories/jewelery">jewelery</Link>
               </li> 
-              <li>
+              <li onClick={() => setIsNavOpen(false)}>
                 <Link href="/categories/electronics">electronics</Link>
               </li>  
-              <li className="border-b border-mainColor my-2 uppercase">
-                <Link href="/categories/womens-clothing">womens clothing</Link>
+              <li onClick={() => setIsNavOpen(false)} className>
+                <Link href="/categories/womens-collection">womens clothing</Link>
               </li>
             </ul>
           </div>

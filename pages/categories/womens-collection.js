@@ -32,7 +32,7 @@ const Womenscollecion = ({products}) => {
   )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   let res = [];
 
    await fetch(`https://fakestoreapi.com/products`)
