@@ -14,17 +14,17 @@ const CardProduct = ({product}) => {
         <div className="h-64 p-3 flex justify-center items-center">
             <Image height="240" width="220" className='rounded-md' alt="Product" src={product.image}/>    
         </div>    
-        <h5 className="my-2  text-sm font-bold tracking-tight text-gray-900 dark:text-white">{product.title}</h5>
+        <h5 className="my-1  text-sm font-bold tracking-tight text-gray-900 dark:text-white">{product.title}</h5>
     
-        <div className="grid gap-3 m-2">
+        <div className="grid gap-2 m-2">
             <div className='flex text-white justify-between'>
                 <div className="text-left">
-                    <p className='font-normal text-sm'>Category: {product.category}</p>
-                    <p className='font-normal text-sm'>Price: {product.price}</p>
+                    <p className='font-normal text-xs'>Category: {product.category}</p>
+                    <p className='font-normal text-xs'>Price: {product.price}</p>
                 </div>
                 <div>
-                    <p className='font-normal text-sm'>Ratings: {rate}</p>
-                    <p className='font-normal text-sm'>Count: {count}</p>
+                    <p className='font-normal text-xs'>Ratings: {rate}</p>
+                    <p className='font-normal text-xs'>Count: {count}</p>
                 </div>
             </div>
             <p className="font-normal text-sm text-gray-700 text-left dark:text-gray-400">{lessDetails(product.description)}...</p>
