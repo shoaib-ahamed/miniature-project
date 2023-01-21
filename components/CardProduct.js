@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 
 const CardProduct = ({product}) => {
+
     const lessDetails =  (str) => {
         return str.split(/\s+/).slice(0, 10).join(" ");
     }
@@ -12,7 +13,7 @@ const CardProduct = ({product}) => {
     <div className="flex">
     <a href="#" className="grid p-2 sm:w-72 h-[530px] w-[336px] bg-cardColor border border-cardColor rounded-lg shadow-md hover:bg-gray-600">
         <div className="h-64 p-3 flex justify-center items-center">
-            <Image height="240" width="220" className='rounded-md' alt="Product" src={product.image}/>    
+            <Image height="240" width="220"  alt="Product" src={product.image}/>    
         </div>    
         <h5 className="my-1  text-sm font-bold tracking-tight text-gray-900 dark:text-white">{product.title}</h5>
     

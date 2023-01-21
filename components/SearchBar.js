@@ -59,7 +59,7 @@ const SearchBar = ({products}) => {
                             <Link href={`/product/${value.id}`}>
                             <div className="flex flex-row border border-mainColor gap-2">
                                 <div className='rounded-md h-16 w-16 flex justify-center items-center'>
-                                    <Image className='rounded-md' height="50" width="50" alt="Product" src={value.image}/>
+                                    <Image height="50" width="50" alt="Product" src={value.image}/>
                                 </div>
                                 <p className="font-normal text-mainColor text-left">{lessDetails(value.title)}...</p>
                             </div>
